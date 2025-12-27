@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circuit Coalition - Public Gateway</title>
+
+    <script src="./tailwind cdn/tail;wind.js"></script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      .video-placeholder {
+        background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-slate-800 antialiased">
+
+    <nav class="w-full py-6 px-6 md:px-12 bg-white shadow-sm relative z-50">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div
+          class="font-bold text-2xl tracking-tight text-[#10294f] flex items-center gap-2 cursor-pointer"
+        >
+          <svg
+            class="w-8 h-8 text-[#10294f]"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z"
+            />
+          </svg>
+          Circuit<span class="text-[#304e77]">Coalition</span>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-8">
+          <ul class="flex space-x-8 text-sm font-semibold text-[#304e77]">
+            <li class="relative group">
+              <a
+                href="#"
+                class="flex items-center hover:text-[#10294f] transition duration-200"
+              >
+                Products
+                <svg
+                  class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform duration-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </a>
+              <ul
+                class="absolute left-0 mt-4 w-56 bg-white border border-slate-100 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-2 transition-all duration-300 ease-out z-50"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-5 py-3 hover:bg-slate-50 hover:text-[#10294f] transition rounded-t-lg"
+                    >Payments Processing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-5 py-3 hover:bg-slate-50 hover:text-[#10294f] transition"
+                    >Billing & Invoicing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-5 py-3 hover:bg-slate-50 hover:text-[#10294f] transition rounded-b-lg"
+                    >Connect Platforms</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="relative group">
+              <a
+                href="#"
+                class="flex items-center hover:text-[#10294f] transition duration-200"
+              >
+                Solutions
+                <svg
+                  class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform duration-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </a>
+              <ul
+                class="absolute left-0 mt-4 w-56 bg-white border border-slate-100 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-2 transition-all duration-300 ease-out z-50"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-5 py-3 hover:bg-slate-50 hover:text-[#10294f] transition rounded-t-lg"
+                    >Payments Processing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-5 py-3 hover:bg-slate-50 hover:text-[#10294f] transition"
+                    >Billing & Invoicing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-5 py-3 hover:bg-slate-50 hover:text-[#10294f] transition rounded-b-lg"
+                    >Connect Platforms</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#10294f] transition">Resources</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#10294f] transition">Pricing</a>
+            </li>
+          </ul>
+          <button
+            class="bg-[#10294f] text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-[#304e77] transition shadow-md hover:shadow-lg transform active:scale-95 duration-200"
+          >
+            Sign In
+          </button>
+        </div>
+
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden text-[#10294f] hover:text-[#304e77] focus:outline-none p-2"
+        >
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden absolute top-full left-0 w-full bg-white border-t border-slate-100 shadow-xl z-40"
+      >
+        <ul
+          class="flex flex-col py-4 px-6 space-y-4 font-semibold text-[#304e77]"
+        >
+          <li>
+            <a href="#" class="block hover:text-[#10294f]">Solutions</a>
+            <ul
+              class="pl-4 mt-2 border-l-2 border-slate-100 space-y-2 text-sm text-slate-500 font-normal"
+            >
+              <li>
+                <a href="#" class="block hover:text-[#10294f]">Payments</a>
+              </li>
+              <li>
+                <a href="#" class="block hover:text-[#10294f]">Billing</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#" class="block hover:text-[#10294f]">Resources</a></li>
+          <li><a href="#" class="block hover:text-[#10294f]">Pricing</a></li>
+          <li>
+            <button
+              class="w-full bg-[#10294f] text-white py-3 rounded-lg font-medium hover:bg-[#304e77] transition shadow mt-2"
+            >
+              Sign In
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="relative pt-16 pb-24 overflow-hidden">
+      <div
+        class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+      >
+        <div class="space-y-6">
+          <h1
+            class="hero-title text-5xl md:text-6xl font-bold tracking-tight text-[#10294f] leading-[1.1]"
+          >
+            Financial infrastructure <br />
+            <span class="text-[#304e77]">to grow your revenue.</span>
+          </h1>
+          <p class="hero-text text-lg text-slate-600 max-w-md leading-relaxed">
+            Join the millions of companies that use Circuit Coalition to accept
+            payments, send payouts, and manage their businesses online.
+          </p>
+          <div class="hero-buttons flex space-x-4 pt-4">
+            <button
+              class="bg-[#10294f] text-white px-7 py-3.5 rounded-full font-semibold hover:bg-[#304e77] transition shadow-xl hover:shadow-2xl hover:-translate-y-1 duration-300"
+            >
+              Start now
+            </button>
+            <button
+              class="text-[#10294f] font-semibold hover:text-[#304e77] flex items-center gap-2 px-4 py-3"
+            >
+              Contact sales <span>→</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-video relative w-full max-w-lg mx-auto lg:mx-0">
+          <div
+            class="bg-white rounded-2xl shadow-2xl border border-slate-200 p-2 transform rotate-1 hover:rotate-0 transition duration-500 ease-out"
+          >
+            <div
+              class="video-placeholder relative rounded-xl overflow-hidden aspect-video group"
+            >
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/EkAdL9By6Wo?autoplay=1&mute=1"
+                title="YouTube video player"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+              ></iframe>
+
+              <div
+                class="absolute inset-0 bg-[#10294f]/10 pointer-events-none"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-50 border-y border-slate-200 py-10">
+      <div
+        class="max-w-7xl mx-auto px-6 md:px-12 flex flex-wrap justify-center md:justify-between items-center gap-8 text-center"
+      >
+        <span class="text-sm font-bold uppercase tracking-widest"
+          >Social Proof</span
+        >
+        <div class="flex items-center gap-3">
+          <svg
+            class="w-5 h-5 text-[#10294f]"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+            ></path>
+          </svg>
+          <div class="text-left">
+            <p class="text-lg font-bold text-[#10294f]">99.99%</p>
+            <p class="text-xs text-slate-500">Uptime</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <svg
+            class="w-5 h-5 text-[#10294f]"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+            ></path>
+          </svg>
+          <div class="text-left">
+            <p class="text-lg font-bold text-[#10294f]">$25B+</p>
+            <p class="text-xs text-slate-500">Processed</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <svg
+            class="w-5 h-5 text-[#10294f]"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"
+            ></path>
+          </svg>
+          <div class="text-left">
+            <p class="text-lg font-bold text-[#10294f]">135+</p>
+            <p class="text-xs text-slate-500">Currencies</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <svg
+            class="w-5 h-5 text-[#10294f]"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+            ></path>
+          </svg>
+          <div class="text-left">
+            <p class="text-lg font-bold text-[#10294f]">24/7</p>
+            <p class="text-xs text-slate-500">Support</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="text-center mb-12">
+          <h2 class="text-xl md:text-2xl font-bold text-slate-800">
+            Some of our valuable Partners
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div
+            class="group relative h-24 bg-white border border-slate-100 rounded-lg flex items-center justify-center cursor-pointer hover:shadow-lg transition-all duration-300"
+          >
+            <span
+              class="text-blue-700 font-extrabold text-xl italic tracking-tighter"
+              >ifs</span
+            >
+            <div
+              class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"
+            ></div>
+          </div>
+
+          <div
+            class="group relative h-24 bg-white border border-slate-100 rounded-lg flex items-center justify-center cursor-pointer hover:shadow-lg transition-all duration-300"
+          >
+            <div class="flex items-center gap-2">
+              <div
+                class="w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center text-white text-[10px] font-bold"
+              >
+                G
+              </div>
+              <span class="text-slate-600 font-semibold text-sm"
+                >Google Fonts</span
+              >
+            </div>
+            <div
+              class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"
+            ></div>
+          </div>
+
+          <div
+            class="group relative h-24 bg-white border border-slate-100 rounded-lg flex items-center justify-center cursor-pointer hover:shadow-lg transition-all duration-300"
+          >
+            <div class="flex flex-col items-start leading-none">
+              <span class="text-slate-800 font-bold text-lg">amazon</span>
+              <div
+                class="w-full h-1 bg-orange-400 rounded-full mt-0.5"
+                style="border-radius: 0 0 50% 50%"
+              ></div>
+            </div>
+            <div
+              class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"
+            ></div>
+          </div>
+
+          <div
+            class="group relative h-24 bg-white border border-slate-100 rounded-lg flex items-center justify-center cursor-pointer hover:shadow-lg transition-all duration-300"
+          >
+            <div class="flex items-center gap-2">
+              <div class="grid grid-cols-2 gap-0.5">
+                <div class="w-2.5 h-2.5 bg-orange-500"></div>
+                <div class="w-2.5 h-2.5 bg-green-500"></div>
+                <div class="w-2.5 h-2.5 bg-blue-500"></div>
+                <div class="w-2.5 h-2.5 bg-yellow-500"></div>
+              </div>
+              <span class="text-slate-600 font-bold text-sm">Microsoft</span>
+            </div>
+            <div
+              class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600"
+            ></div>
+          </div>
+
+          <div
+            class="group relative h-24 bg-white border border-slate-100 rounded-lg flex items-center justify-center cursor-pointer hover:shadow-lg transition-all duration-300"
+          >
+            <div class="flex items-center gap-1">
+              <span class="text-blue-400 font-bold text-lg">H</span>
+              <span class="text-slate-700 font-bold text-sm">HelpScout</span>
+            </div>
+            <div
+              class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"
+            ></div>
+          </div>
+
+          <div
+            class="group relative h-24 bg-white border border-slate-100 rounded-lg flex items-center justify-center cursor-pointer hover:shadow-lg transition-all duration-300"
+          >
+            <div class="flex items-center gap-1">
+              <div class="w-4 h-4 rounded-full border-2 border-blue-500"></div>
+              <span class="text-slate-700 font-bold text-sm">Optimizely</span>
+            </div>
+            <div
+              class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"
+            ></div>
+          </div>
+
+          <div
+            class="group relative h-24 bg-white border border-slate-100 rounded-lg flex items-center justify-center cursor-pointer hover:shadow-lg transition-all duration-300"
+          >
+            <div class="flex items-center gap-1">
+              <svg
+                class="w-5 h-5 text-slate-600"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M5.5 16a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 16h-8z"
+                />
+              </svg>
+              <span class="text-slate-600 font-semibold text-sm">breezy</span>
+            </div>
+            <div
+              class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"
+            ></div>
+          </div>
+
+          <div
+            class="group relative h-24 bg-white border border-slate-100 rounded-lg flex items-center justify-center cursor-pointer hover:shadow-lg transition-all duration-300"
+          >
+            <div class="flex items-center gap-1">
+              <div class="flex gap-0.5">
+                <div class="w-1.5 h-3 bg-red-500 rounded-full"></div>
+                <div class="w-1.5 h-4 bg-blue-500 rounded-full"></div>
+                <div class="w-1.5 h-2 bg-yellow-500 rounded-full"></div>
+              </div>
+              <span class="text-slate-800 font-bold text-sm">attio</span>
+            </div>
+            <div
+              class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"
+            ></div>
+          </div>
+
+          <div
+            class="group relative h-24 bg-white border border-slate-100 rounded-lg flex items-center justify-center cursor-pointer hover:shadow-lg transition-all duration-300"
+          >
+            <div class="flex items-center gap-1">
+              <span class="font-bold text-blue-900 text-lg italic">P</span>
+              <span class="font-bold text-blue-500 text-lg italic">P</span>
+              <span class="text-slate-700 font-bold text-sm ml-1">PayPal</span>
+            </div>
+            <div
+              class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"
+            ></div>
+          </div>
+
+          <div
+            class="group relative h-24 bg-white border border-slate-100 rounded-lg flex items-center justify-center cursor-pointer hover:shadow-lg transition-all duration-300"
+          >
+            <span class="text-slate-700 font-bold text-sm tracking-wide"
+              >/// mparticle</span
+            >
+            <div
+              class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"
+            ></div>
+          </div>
+
+          <div
+            class="group relative h-24 bg-white border border-slate-100 rounded-lg flex items-center justify-center cursor-pointer hover:shadow-lg transition-all duration-300"
+          >
+            <div class="flex items-center gap-1">
+              <span class="text-slate-700 font-bold text-sm">HubSpot</span>
+              <div
+                class="w-2 h-2 rounded-full bg-orange-500 border border-white"
+              ></div>
+            </div>
+            <div
+              class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"
+            ></div>
+          </div>
+
+          <div
+            class="group relative h-24 bg-white border border-slate-100 rounded-lg flex items-center justify-center cursor-pointer hover:shadow-lg transition-all duration-300"
+          >
+            <span class="text-slate-800 font-bold text-xl tracking-tight"
+              >miro</span
+            >
+            <div
+              class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-white overflow-hidden">
+      <div
+        class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+      >
+        <!-- Text Content -->
+        <div class="space-y-8 gsap-text">
+          <h2
+            class="text-4xl md:text-5xl font-bold text-[#10294f] tracking-tight leading-tight"
+          >
+            Smart <br />
+            Payment Rails
+          </h2>
+
+          <p class="text-lg text-slate-500 leading-relaxed max-w-md">
+            Rational-oriented companion formula business guarantee adaptive
+            tonality ideal plans.
+          </p>
+
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 mt-1">
+              <svg
+                class="w-6 h-6 text-teal-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-[#10294f] mb-2">
+                Real-time transactions
+              </h3>
+              <p class="text-slate-500">
+                Real-time transactions access real time transactions for faster
+                business logic.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <button
+              class="bg-black text-white px-8 py-3.5 rounded-full font-semibold hover:bg-[#165a5a] transition shadow-lg hover:shadow-xl hover:-translate-y-1 duration-300 flex items-center gap-2"
+            >
+              Get started
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Animated Images -->
+        <div class="relative w-full gsap-images">
+          <div
+            class="absolute -inset-4 bg-gradient-to-tr from-teal-50 to-blue-50 rounded-full blur-3xl opacity-70 -z-10"
+          ></div>
+
+          <div class="relative w-full h-[400px]">
+            <!-- Image 1 -->
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+              alt="Dashboard 1"
+              class="absolute top-0 left-0 w-3/5 h-auto rounded-2xl shadow-2xl border border-slate-100 object-cover gsap-img"
+            />
+
+            <!-- Image 2 -->
+            <img
+              src="./assets/payment.png"
+              alt="Dashboard 2"
+              class="absolute top-10 left-1/3 w-3/5 h-auto rounded-2xl shadow-2xl border border-slate-100 object-cover gsap-img"
+            />
+
+            <!-- Image 3 -->
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2070&auto=format&fit=crop"
+              alt="Dashboard 3"
+              class="absolute top-20 left-1/4 w-3/5 h-auto rounded-2xl shadow-2xl border border-slate-100 object-cover gsap-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="ecosystem-section"
+      class="relative py-24 bg-gradient-to-br from-[#304e77] via-[#1e293b] to-[#0f172a] text-white overflow-hidden"
+    >
+      <div
+        class="absolute top-0 left-0 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+      ></div>
+      <div
+        class="absolute bottom-0 right-0 w-96 h-96 bg-purple-600/20 rounded-full blur-[100px] translate-x-1/2 translate-y-1/2 pointer-events-none"
+      ></div>
+
+      <div class="relative max-w-7xl mx-auto px-6 md:px-12">
+        <div
+          id="eco-header"
+          class="text-center mb-16"
+          style="opacity: 0; visibility: hidden"
+        >
+          <h2
+            class="text-3xl md:text-4xl font-bold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-white"
+          >
+            Explore Our Ecosystem
+          </h2>
+          <p
+            class="text-sm md:text-base text-slate-400 max-w-2xl mx-auto leading-relaxed"
+          >
+            Unlock the full potential of your financial infrastructure.
+            Seamlessly integrate, manage, and scale your operations with our
+            comprehensive suite of tools.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="eco-card p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-blue-500/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] transition-all duration-300 group cursor-pointer"
+            style="opacity: 0; visibility: hidden"
+          >
+            <div class="flex items-center gap-3 mb-3">
+              <div
+                class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 group-hover:scale-110 transition duration-300"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-lg font-semibold text-white group-hover:text-blue-300 transition"
+              >
+                Payment Customs
+              </h3>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Expenses war offering abstracts, funds payment patterns seamlessly
+              adapted to your needs.
+            </p>
+          </div>
+
+          <div
+            class="eco-card p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-emerald-500/30 hover:shadow-[0_0_30px_rgba(16,185,129,0.15)] transition-all duration-300 group cursor-pointer"
+            style="opacity: 0; visibility: hidden"
+          >
+            <div class="flex items-center gap-3 mb-3">
+              <div
+                class="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition duration-300"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-lg font-semibold text-white group-hover:text-emerald-300 transition"
+              >
+                Soft Support
+              </h3>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Capacities lines extract local settlements slowly, securely, and
+              with zero friction.
+            </p>
+          </div>
+
+          <div
+            class="eco-card p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-purple-500/30 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] transition-all duration-300 group cursor-pointer"
+            style="opacity: 0; visibility: hidden"
+          >
+            <div class="flex items-center gap-3 mb-3">
+              <div
+                class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400 group-hover:scale-110 transition duration-300"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-lg font-semibold text-white group-hover:text-purple-300 transition"
+              >
+                Partner Permissions
+              </h3>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Micro-service architecture supports granular roles and permissions
+              in your options.
+            </p>
+          </div>
+
+          <div
+            class="eco-card p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-orange-500/30 hover:shadow-[0_0_30px_rgba(249,115,22,0.15)] transition-all duration-300 group cursor-pointer"
+            style="opacity: 0; visibility: hidden"
+          >
+            <div class="flex items-center gap-3 mb-3">
+              <div
+                class="w-8 h-8 rounded-lg bg-orange-500/20 flex items-center justify-center text-orange-400 group-hover:scale-110 transition duration-300"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-lg font-semibold text-white group-hover:text-orange-300 transition"
+              >
+                Payment Benefactions
+              </h3>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Invoices enterprise and minimized data scrum via API integration.
+            </p>
+          </div>
+
+          <div
+            class="eco-card p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-pink-500/30 hover:shadow-[0_0_30px_rgba(236,72,153,0.15)] transition-all duration-300 group cursor-pointer"
+            style="opacity: 0; visibility: hidden"
+          >
+            <div class="flex items-center gap-3 mb-3">
+              <div
+                class="w-8 h-8 rounded-lg bg-pink-500/20 flex items-center justify-center text-pink-400 group-hover:scale-110 transition duration-300"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-lg font-semibold text-white group-hover:text-pink-300 transition"
+              >
+                Other Networks
+              </h3>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Entities unlock auto scripts to extensive channels and payment
+              networks globally.
+            </p>
+          </div>
+
+          <div
+            class="eco-card p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-yellow-500/30 hover:shadow-[0_0_30px_rgba(234,179,8,0.15)] transition-all duration-300 group cursor-pointer"
+            style="opacity: 0; visibility: hidden"
+          >
+            <div class="flex items-center gap-3 mb-3">
+              <div
+                class="w-8 h-8 rounded-lg bg-yellow-500/20 flex items-center justify-center text-yellow-400 group-hover:scale-110 transition duration-300"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-lg font-semibold text-white group-hover:text-yellow-300 transition"
+              >
+                Platform Quotes
+              </h3>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Treasury request for urgent plans, tailored for future scaling
+              principles.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="relative py-28 md:py-32 overflow-hidden bg-white text-[#10294f]"
+    >
+      <!-- Background Blurs -->
+      <div
+        class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#304e77] rounded-full blur-[120px] opacity-10 translate-x-1/3 -translate-y-1/3"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#10294f] rounded-full blur-[120px] opacity-10 -translate-x-1/3 translate-y-1/3"
+      ></div>
+
+      <!-- Grid Overlay -->
+      <div
+        class="absolute inset-0 opacity-5"
+        style="
+          background-image: linear-gradient(#f0f0f0 1px, transparent 1px),
+            linear-gradient(90deg, #f0f0f0 1px, transparent 1px);
+          background-size: 40px 40px;
+        "
+      ></div>
+
+      <!-- Main Content -->
+      <div class="relative max-w-5xl mx-auto px-6 md:px-12 text-center z-10">
+        <!-- Live Badge -->
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-[#f9f9f9]/50 border border-[#e0e0e0] backdrop-blur-md mb-8 gsap-hidden"
+        >
+          <span class="relative flex h-2 w-2">
+            <span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"
+            ></span>
+            <span
+              class="relative inline-flex rounded-full h-2 w-2 bg-green-500"
+            ></span>
+          </span>
+          <span class="text-xs md:text-sm font-medium tracking-wide"
+            >Live Globally</span
+          >
+        </div>
+
+        <!-- Heading -->
+        <h1
+          class="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6 gsap-hidden"
+        >
+          Ready to scale your <br />
+          <span class="text-[#304e77]">financial empire?</span>
+        </h1>
+
+        <!-- Subtext -->
+        <p
+          class="text-sm md:text-lg text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed gsap-hidden"
+        >
+          Join over 4,000+ startups and enterprise companies growing their
+          revenue with Circuit Coalition's unified platform.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center gap-4 gsap-hidden"
+        >
+          <button
+            class="w-full sm:w-auto bg-[#10294f] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#304e77] transition shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300"
+          >
+            Create free account
+          </button>
+
+          <button
+            class="w-full sm:w-auto px-8 py-4 rounded-full font-semibold text-[#10294f] border border-[#10294f]/30 hover:bg-[#f0f0f0] transition flex items-center justify-center gap-2"
+          >
+            Contact Sales
+            <svg
+              class="w-4 h-4 transform group-hover:translate-x-1 transition"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <p class="mt-6 text-xs md:text-sm text-slate-500 gsap-hidden">
+          No credit card required. 14-day free trial.
+        </p>
+
+        <!-- Floating Cards -->
+        <div
+          class="hidden lg:block absolute top-1/2 -left-24 transform -translate-y-1/2 rotate-12 hover:rotate-0 transition duration-700 gsap-hidden"
+        >
+          <div
+            class="bg-white border border-gray-200 p-4 rounded-2xl shadow-xl w-48"
+          >
+            <div class="flex items-center gap-3 mb-3">
+              <div
+                class="w-8 h-8 rounded-full bg-orange-400 flex items-center justify-center text-white text-xs font-bold"
+              >
+                JM
+              </div>
+              <div>
+                <div class="h-2 w-16 bg-gray-200 rounded"></div>
+                <div class="h-2 w-10 bg-gray-100 rounded mt-1"></div>
+              </div>
+            </div>
+            <div class="h-8 w-full bg-gray-100 rounded"></div>
+          </div>
+        </div>
+
+        <div
+          class="hidden lg:block absolute top-1/2 -right-24 transform -translate-y-1/2 -rotate-12 hover:rotate-0 transition duration-700 gsap-hidden"
+        >
+          <div
+            class="bg-white border border-gray-200 p-4 rounded-2xl shadow-xl w-48"
+          >
+            <div class="flex justify-between items-center mb-2">
+              <div class="text-xs font-bold text-[#10294f]">Income</div>
+              <div class="text-green-500 text-xs font-bold">+24%</div>
+            </div>
+            <div class="flex items-end gap-1 h-12">
+              <div class="w-1/5 bg-gray-200 h-[40%] rounded-t"></div>
+              <div class="w-1/5 bg-gray-200 h-[60%] rounded-t"></div>
+              <div class="w-1/5 bg-gray-200 h-[30%] rounded-t"></div>
+              <div class="w-1/5 bg-gray-200 h-[80%] rounded-t"></div>
+              <div
+                class="w-1/5 bg-teal-400 h-[100%] rounded-t shadow-[0_0_10px_rgba(45,212,191,0.5)]"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative py-12 bg-[#0a2540] overflow-hidden">
+      <div
+        class="absolute top-0 left-0 w-full overflow-hidden leading-[0] transform rotate-180"
+      >
+        <svg
+          class="relative block w-full h-[100px]"
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path d="M1200 120L0 16.48V0h1200v120z" class="fill-white"></path>
+        </svg>
+      </div>
+
+      <div class="absolute inset-0 pointer-events-none">
+        <img
+          src="https://www.transparentpng.com/thumb/world-map/dark-blue-world-map-dots-png-3.png"
+          alt="Global Network"
+          class="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[60%] opacity-20 animate-pulse"
+          style="animation-duration: 10s"
+        />
+        <div
+          class="absolute top-0 right-0 w-full h-full bg-[url('https://assets.website-files.com/63a9fb94e473f36dbe99c1b1/63a9fb94e473f33b4e99c218_line-map.svg')] bg-no-repeat bg-right-top opacity-40"
+        ></div>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-6 md:px-12 pt-16">
+        <div class="max-w-3xl space-y-6 mb-16">
+          <h3 class="text-blue-400 font-semibold tracking-wide uppercase">
+            Global scale
+          </h3>
+          <h2
+            class="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight"
+          >
+            The backbone for <br />
+            global commerce
+          </h2>
+          <p class="text-lg text-slate-300 leading-relaxed">
+            We make moving money as easy and programmable as moving data. Our
+            teams are based in offices around the world and we process hundreds
+            of billions of dollars each year for ambitious businesses of all
+            sizes.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12"
+        >
+          <div
+            class="border-l-2 border-blue-500/30 pl-6 group hover:border-blue-400 transition duration-300"
+          >
+            <h4
+              class="text-4xl font-bold text-white mb-2 group-hover:scale-105 transition origin-left"
+            >
+              500M+
+            </h4>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              API requests per day, peaking at 13,000 requests a second.
+            </p>
+          </div>
+
+          <div
+            class="border-l-2 border-blue-500/30 pl-6 group hover:border-blue-400 transition duration-300"
+          >
+            <h4
+              class="text-4xl font-bold text-white mb-2 group-hover:scale-105 transition origin-left"
+            >
+              99.999%
+            </h4>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Historical uptime for
+              <a
+                href="#"
+                class="text-blue-400 hover:text-blue-300 underline-offset-2 hover:underline"
+                >core services</a
+              >.
+            </p>
+          </div>
+
+          <div
+            class="border-l-2 border-blue-500/30 pl-6 group hover:border-blue-400 transition duration-300"
+          >
+            <h4
+              class="text-4xl font-bold text-white mb-2 group-hover:scale-105 transition origin-left"
+            >
+              90%
+            </h4>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Of US adults have bought from businesses using our platform.
+            </p>
+          </div>
+
+          <div
+            class="border-l-2 border-blue-500/30 pl-6 group hover:border-blue-400 transition duration-300"
+          >
+            <h4
+              class="text-4xl font-bold text-white mb-2 group-hover:scale-105 transition origin-left"
+            >
+              135+
+            </h4>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Currencies and payment methods supported globally.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="fixed bottom-8 right-8 z-50">
+    <button class="bg-white text-[#0a2540] px-6 py-3.5 rounded-full font-semibold shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300 flex items-center gap-3 group">
+      <svg class="w-5 h-5 text-blue-500 group-hover:scale-110 transition" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"></path>
+      </svg>
+      Chat with Sales
+    </button>
+  </div> -->
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
