@@ -177,3 +177,43 @@ document.addEventListener("DOMContentLoaded", () => {
         const walk = (x - startX) * 2;
         slider.scrollLeft = scrollLeft - walk;
       });
+
+
+      //  ======================================
+        // GSAP ScrollTrigger Registration
+        gsap.registerPlugin(ScrollTrigger);
+
+        const textSteps = document.querySelectorAll(".text-step");
+        const visualImages = document.querySelectorAll(".visual-img");
+
+        textSteps.forEach((step, index) => {
+            ScrollTrigger.create({
+                trigger: step,
+                // ট্রিগার পয়েন্ট: যখন টেক্সটটি স্ক্রিনের মাঝখানে আসবে তখন এক্টিভ হবে
+                start: "top center+=10%", 
+                end: "bottom center+=10%",
+                
+                onEnter: () => updateState(index),
+                onEnterBack: () => updateState(index),
+            });
+        });
+
+        function updateState(activeIndex) {
+            // Update Text Focus
+            textSteps.forEach((step, i) => {
+                if (i === activeIndex) {
+                    step.classList.add("active");
+                } else {
+                    step.classList.remove("active");
+                }
+            });
+
+            // Update Image Switch
+            visualImages.forEach((img, i) => {
+                if (i === activeIndex) {
+                    img.classList.add("active");
+                } else {
+                    img.classList.remove("active");
+                }
+            });
+        }

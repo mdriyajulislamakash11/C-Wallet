@@ -13,23 +13,72 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
 
-      body {
-        font-family: "Inter", sans-serif;
-      }
-
       .video-placeholder {
         background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
       }
 
       /*  */
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        .cursor-grab { cursor: grab; }
-        .cursor-grabbing { cursor: grabbing; }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .cursor-grab {
+        cursor: grab;
+      }
+      .cursor-grabbing {
+        cursor: grabbing;
+      }
+
+      /* -------------------------------------------------------- */
+        body { font-family: 'Inter', sans-serif; background-color: #f6f9fc; color: #0a2540; }
+
+
+
+        .visual-img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transform: scale(1.1);
+            transition: opacity 0.8s ease, transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .visual-img.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .text-step {
+            /* opacity: 0.3;  */
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            padding-left: 2rem;
+            border-left: 3px solid transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            min-h-[70vh];
+        }
+
+        .text-step.active {
+            opacity: 1;
+            border-left: 3px solid #6366f1;
+        }
+
+        /* ICON BOX STYLE */
+        .icon-box {
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05);
+        }
     </style>
   </head>
   <body class="bg-white text-slate-800 antialiased">
-    <nav class="w-full py-6 px-6 md:px-12 bg-white shadow-sm relative z-50">
+    <nav
+      class="max-w-7xl mx-auto py-6 px-6 md:px-12 bg-white shadow-sm relative z-50"
+    >
       <div class="max-w-7xl mx-auto flex justify-between items-center">
         <div
           class="font-bold text-2xl tracking-tight text-[#10294f] flex items-center gap-2 cursor-pointer"
@@ -262,92 +311,6 @@
       </div>
     </section>
 
-    <section class="bg-slate-50 border-y border-slate-200 py-10">
-      <div
-        class="max-w-7xl mx-auto px-6 md:px-12 flex flex-wrap justify-center md:justify-between items-center gap-8 text-center"
-      >
-        <span class="text-sm font-bold uppercase tracking-widest"
-          >Social Proof</span
-        >
-        <div class="flex items-center gap-3">
-          <svg
-            class="w-5 h-5 text-[#10294f]"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-            ></path>
-          </svg>
-          <div class="text-left">
-            <p class="text-lg font-bold text-[#10294f]">99.99%</p>
-            <p class="text-xs text-slate-500">Uptime</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-3">
-          <svg
-            class="w-5 h-5 text-[#10294f]"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
-            ></path>
-          </svg>
-          <div class="text-left">
-            <p class="text-lg font-bold text-[#10294f]">$25B+</p>
-            <p class="text-xs text-slate-500">Processed</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-3">
-          <svg
-            class="w-5 h-5 text-[#10294f]"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"
-            ></path>
-          </svg>
-          <div class="text-left">
-            <p class="text-lg font-bold text-[#10294f]">135+</p>
-            <p class="text-xs text-slate-500">Currencies</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-3">
-          <svg
-            class="w-5 h-5 text-[#10294f]"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
-            ></path>
-          </svg>
-          <div class="text-left">
-            <p class="text-lg font-bold text-[#10294f]">24/7</p>
-            <p class="text-xs text-slate-500">Support</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="py-20 bg-slate-50">
       <div class="max-w-7xl mx-auto px-6 md:px-12">
         <div class="text-center mb-12">
@@ -531,100 +494,255 @@
       </div>
     </section>
 
-    <section class="py-24 bg-white overflow-hidden">
-      <div
-        class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
-      >
-        <!-- Text Content -->
-        <div class="space-y-8 gsap-text">
-          <h2
-            class="text-4xl md:text-5xl font-bold text-[#10294f] tracking-tight leading-tight"
-          >
-            Smart <br />
-            Payment Rails
-          </h2>
-
-          <p class="text-lg text-slate-500 leading-relaxed max-w-md">
-            Rational-oriented companion formula business guarantee adaptive
-            tonality ideal plans.
-          </p>
-
-          <div class="flex items-start gap-4">
-            <div class="flex-shrink-0 mt-1">
-              <svg
-                class="w-6 h-6 text-teal-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+    <section class="relative py-24" id="modular-solutions">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-12 lg:gap-24">
+          <div class="w-full lg:w-1/2 pt-3 lg:pt-6 pb-24">
+            <div class="mb-24">
+              <h4
+                class="text-indigo-600 font-bold text-sm tracking-wider uppercase mb-4"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                ></path>
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-xl font-bold text-[#10294f] mb-2">
-                Real-time transactions
-              </h3>
-              <p class="text-slate-500">
-                Real-time transactions access real time transactions for faster
-                business logic.
+                Modular Solutions
+              </h4>
+              <h2
+                class="text-4xl md:text-5xl font-bold leading-tight tracking-tight text-[#0A2540]"
+              >
+                A fully integrated suite of financial products
+              </h2>
+              <p class="mt-6 text-lg text-slate-500 leading-relaxed">
+                Reduce costs, grow revenue, and run your business more
+                efficiently on a fully integrated platform.
               </p>
             </div>
-          </div>
 
-          <div class="pt-4">
-            <button
-              class="bg-black text-white px-8 py-3.5 rounded-full font-semibold hover:bg-[#165a5a] transition shadow-lg hover:shadow-xl hover:-translate-y-1 duration-300 flex items-center gap-2"
-            >
-              Get started
-              <svg
-                class="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+            <div class="text-step mb-20" data-index="0">
+              <div
+                class="w-14 h-14 rounded-2xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 mb-6 icon-box"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                ></path>
-              </svg>
-            </button>
+                <svg
+                  class="w-7 h-7"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-3xl font-bold mb-4 text-[#0A2540]">
+                Global Payments
+              </h3>
+              <p class="text-lg text-slate-500 leading-relaxed mb-8">
+                Accept payments from customers worldwide with a single
+                integration. Optimize for conversion with local payment methods.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-indigo-600 font-semibold hover:text-indigo-800 transition-colors group"
+              >
+                Start with Payments
+                <svg
+                  class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+
+            <div class="text-step mb-20" data-index="1">
+              <div
+                class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 mb-6 icon-box"
+              >
+                <svg
+                  class="w-7 h-7"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-3xl font-bold mb-4 text-[#0A2540]">
+                Recurring Revenue
+              </h3>
+              <p class="text-lg text-slate-500 leading-relaxed mb-8">
+                Manage flat rate, usage-based, and hybrid pricing models.
+                Minimize churn and automate finance operations effortlessly.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-emerald-600 font-semibold hover:text-emerald-800 transition-colors group"
+              >
+                Start with Billing
+                <svg
+                  class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+
+            <div class="text-step mb-20" data-index="2">
+              <div
+                class="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 mb-6 icon-box"
+              >
+                <svg
+                  class="w-7 h-7"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-3xl font-bold mb-4 text-[#0A2540]">
+                Platform Connect
+              </h3>
+              <p class="text-lg text-slate-500 leading-relaxed mb-8">
+                Onboard users, facilitate payments, and route funds to sellers
+                seamlessly. Manage compliance globally with a unified API.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors group"
+              >
+                Start with Connect
+                <svg
+                  class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+
+            <div class="text-step" data-index="3">
+              <div
+                class="w-14 h-14 rounded-2xl bg-orange-50 border border-orange-100 flex items-center justify-center text-orange-600 mb-6 icon-box"
+              >
+                <svg
+                  class="w-7 h-7"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-3xl font-bold mb-4 text-[#0A2540]">
+                Card Issuing
+              </h3>
+              <p class="text-lg text-slate-500 leading-relaxed mb-8">
+                Create, distribute, and manage physical and virtual cards.
+                Control expenses and streamline operations with real-time data.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-orange-600 font-semibold hover:text-orange-800 transition-colors group"
+              >
+                Start Issuing
+                <svg
+                  class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  ></path>
+                </svg>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <!-- Animated Images -->
-        <div class="relative w-full gsap-images">
-          <div
-            class="absolute -inset-4 bg-gradient-to-tr from-teal-50 to-blue-50 rounded-full blur-3xl opacity-70 -z-10"
-          ></div>
+          <div class="hidden lg:block md:w-1/2 relative pt-3 lg:pt-6">
+            <div class="sticky top-24 h-80 flex items-center justify-center">
+              <div
+                class="absolute w-[80%] h-[60%] bg-gradient-to-tr from-indigo-100 to-purple-50 rounded-full blur-3xl -z-10 opacity-70 animate-pulse"
+              ></div>
 
-          <div class="relative w-full h-[400px]">
-            <!-- Image 1 -->
-            <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
-              alt="Dashboard 1"
-              class="absolute top-0 left-0 w-3/5 h-auto rounded-2xl shadow-2xl border border-slate-100 object-cover gsap-img"
-            />
+              <div class="">
+                <img
+                  src="./assets/py-1.jpg"
+                  class="visual-img active rounded-lg"
+                  data-index="0"
+                  alt="Payments UI"
+                />
 
-            <!-- Image 2 -->
-            <img
-              src="./assets/payment.png"
-              alt="Dashboard 2"
-              class="absolute top-10 left-1/3 w-3/5 h-auto rounded-2xl shadow-2xl border border-slate-100 object-cover gsap-img"
-            />
+                <img
+                  src="./assets/py-2.jpg"
+                  class="visual-img active rounded-lg"
+                  data-index="0"
+                  alt="Payments UI"
+                />
 
-            <!-- Image 3 -->
-            <img
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2070&auto=format&fit=crop"
-              alt="Dashboard 3"
-              class="absolute top-20 left-1/4 w-3/5 h-auto rounded-2xl shadow-2xl border border-slate-100 object-cover gsap-img"
-            />
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+                  class="visual-img rounded-lg"
+                  data-index="1"
+                  alt="Billing UI"
+                />
+
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
+                  class="visual-img rounded-lg"
+                  data-index="2"
+                  alt="Connect UI"
+                />
+
+                <img
+                  src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1470&auto=format&fit=crop"
+                  class="visual-img rounded-lg"
+                  data-index="3"
+                  alt="Issuing UI"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1004,7 +1122,7 @@
       </div>
     </section>
 
-        <div class="py-16 md:px-10  ">
+    <div class="py-16 md:px-10">
       <div class="mx-auto max-w-[1400px] px-6">
         <div class="max-w-3xl mb-10 px-2">
           <h2
@@ -1495,22 +1613,7 @@
       </div>
     </div>
 
-
     <section class="relative py-12 bg-[#0a2540] overflow-hidden">
-      <div
-        class="absolute top-0 left-0 w-full overflow-hidden leading-[0] transform rotate-180"
-      >
-        <svg
-          class="relative block w-full h-[100px]"
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path d="M1200 120L0 16.48V0h1200v120z" class="fill-white"></path>
-        </svg>
-      </div>
-
       <div class="absolute inset-0 pointer-events-none">
         <img
           src="https://www.transparentpng.com/thumb/world-map/dark-blue-world-map-dots-png-3.png"
